@@ -58,3 +58,242 @@
   <!-- </body> -->
 
 <!-- </html> -->
+
+
+
+Notes Guide
+📂 **Tab 1: Overview**
+
+### 🧭 12-Week Web Development Roadmap
+
+**Goal:** Teach intermediate learners how to build and deploy responsive frontend applications using HTML, CSS, JavaScript, and Firebase.
+
+### 📅 Session Schedule
+
+* **Frequency**: 3 sessions/week
+* **Session Duration**: \~2 hours
+* **Total Sessions**: 36
+* **Delivery Mode**: Remote (Google Meet + VS Code Live Share)
+
+### 🛠️ Tools & Platforms
+
+| Tool            | Purpose                            | Link                                                                                       |
+| --------------- | ---------------------------------- | ------------------------------------------------------------------------------------------ |
+| VS Code         | Code Editor                        | [https://code.visualstudio.com/](https://code.visualstudio.com/)                           |
+| Git + GitHub    | Version Control                    | [https://desktop.github.com/](https://desktop.github.com/)                                 |
+| Firebase        | Backend (Auth, Firestore, Hosting) | [https://firebase.google.com/](https://firebase.google.com/)                               |
+| Chrome DevTools | Debugging                          | [https://developer.chrome.com/docs/devtools/](https://developer.chrome.com/docs/devtools/) |
+| Notion/Trello   | Progress Tracking                  | [https://notion.so](https://notion.so) / [https://trello.com/](https://trello.com/)        |
+| GitHub Pages    | Deployment                         | [https://pages.github.com/](https://pages.github.com/)                                     |
+
+### 📚 Learning Phases
+
+| Phase | Duration    | Focus                                       |
+| ----- | ----------- | ------------------------------------------- |
+| 1     | Weeks 1–2   | HTML, CSS, JavaScript fundamentals          |
+| 2     | Weeks 3–4   | Real-world mini-project + Git/GitHub basics |
+| 3     | Weeks 5–6   | JavaScript with APIs (OpenWeather API etc.) |
+| 4     | Weeks 7–8   | Firebase Intro: Auth, Firestore, Hosting    |
+| 5     | Weeks 9–10  | Final Project (CRUD + Auth + Hosting)       |
+| 6     | Weeks 11–12 | Portfolio, Resume, GitHub & LinkedIn Setup  |
+
+### 📋 Session Format
+
+| Time         | Activity                                 |
+| ------------ | ---------------------------------------- |
+| 15 min       | Recap previous session                   |
+| 30 min       | Concept explanation with live coding     |
+| 45 min       | Hands-on project or challenge            |
+| 15 min       | Q\&A, Git commits, assignment discussion |
+| Optional 15m | Portfolio and GitHub reviews             |
+
+### 🔗 Reference Resources
+
+* [MDN Web Docs](https://developer.mozilla.org/)
+* [W3Schools](https://www.w3schools.com/)
+* [CSS Tricks](https://css-tricks.com/)
+* [Firebase Docs](https://firebase.google.com/docs)
+* [FreeCodeCamp](https://www.freecodecamp.org/)
+
+---
+
+📂 **Tab 2: Week 1–2: HTML/CSS/JS Basics**
+
+### 🔹 Session 1: HTML Refresher
+
+**Topics:**
+
+* Basic structure of HTML
+* Semantic tags: `<header>`, `<nav>`, `<main>`, `<footer>`
+* Inline vs block elements
+
+**Hands-on Task:** Build a personal bio page with:
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bio</title>
+</head>
+<body>
+  <header>
+    <h1>John Doe</h1>
+    <p>Aspiring Web Developer</p>
+  </header>
+  <main>
+    <h2>About Me</h2>
+    <p>I love learning web development.</p>
+  </main>
+</body>
+</html>
+```
+
+**Assignment:**
+
+* Create a mock landing page layout using only HTML.
+
+---
+
+### 🔹 Session 2: CSS Fundamentals
+
+**Topics:**
+
+* Selectors, properties, values
+* Box model, margin, padding, colors, fonts
+* Flexbox basics
+
+**Hands-on Task:**
+
+* Style the personal bio page
+
+```css
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+```
+
+**Assignment:**
+
+* Style the mock landing page with flexbox layout.
+
+---
+
+### 🔹 Session 3: JavaScript Basics
+
+**Topics:**
+
+* Variables (`let`, `const`), data types
+* Functions, arrays, conditionals, loops
+
+**Hands-on Task:**
+
+* Build a simple quiz that shows an alert based on input
+
+```js
+// quiz.js
+function checkAnswer() {
+  const answer = prompt("What is 2 + 2?");
+  if (answer == 4) {
+    alert("Correct!");
+  } else {
+    alert("Try again!");
+  }
+}
+checkAnswer();
+```
+
+**Assignment:**
+
+* Create a JS quiz with 3 questions using prompt and alert.
+
+---
+
+### 🔹 Session 4: DOM Manipulation
+
+**Topics:**
+
+* `getElementById`, `querySelector`
+* `addEventListener`, modifying DOM
+
+**Hands-on Task:**
+
+* Build a to-do list
+
+```js
+// todo.js
+document.getElementById("addBtn").addEventListener("click", function() {
+  const input = document.getElementById("task");
+  const newTask = document.createElement("li");
+  newTask.textContent = input.value;
+  document.getElementById("tasks").appendChild(newTask);
+  input.value = "";
+});
+```
+
+**Assignment:**
+
+* Add a delete button to each task.
+
+---
+
+### 🔹 Session 5: Events + Forms
+
+**Topics:**
+
+* Form events: `submit`, `input`, `change`
+* `preventDefault`, form validation
+
+**Hands-on Task:**
+
+* Create a login form UI with JS validation
+
+```js
+// form.js
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  if (username && password.length >= 6) {
+    alert("Login successful!");
+  } else {
+    alert("Please enter valid details.");
+  }
+});
+```
+
+**Assignment:**
+
+* Add password strength indicator.
+
+---
+
+### 🔹 Session 6: Mini Challenge + Git Setup
+
+**Topics:**
+
+* Recap quiz
+* Install Git + GitHub Desktop
+* Connect VS Code to GitHub
+
+**Assignment:**
+
+* Push your personal landing page to GitHub
+* Share link to repo in the learning board
+
+---
+
+📂 **Tab 3 to Tab 7 will be continued in next update.**
