@@ -297,3 +297,144 @@ document.querySelector("form").addEventListener("submit", function(e) {
 ---
 
 📂 **Tab 3 to Tab 7 will be continued in next update.**
+📂 Tab 3: Week 3–4 – Projects & Git
+🔹 Session 7–9: Mini Project 1 - Responsive Landing Page
+Topics:
+
+Semantic HTML5
+
+Responsive layouts using Flexbox and Media Queries
+
+Assignment: Design and build a simple business landing page.
+
+Code Snippet (media query):
+
+css
+Copy
+Edit
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+🔹 Session 10: Intro to Git
+Topics:
+
+git init, commit, push
+
+Using GitHub Desktop
+
+Assignment: Connect your landing page project to GitHub and push.
+
+🔹 Session 11–12: Mini Project Polish + Code Review
+Add animations (CSS transitions)
+
+Peer review via VS Code Live Share
+
+📂 Tab 4: Week 5–6 – JavaScript & APIs
+🔹 Session 13–15: Working with APIs
+Topics:
+
+fetch API
+
+Promises and async/await
+
+Project: Build a Weather App using OpenWeather API
+
+Code Example:
+
+js
+Copy
+Edit
+// Fetch weather
+async function getWeather() {
+  const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Nairobi&appid=YOUR_API_KEY");
+  const data = await response.json();
+  console.log(data);
+}
+Resources:
+
+OpenWeather API Docs
+
+🔹 Session 16–18: More API Work + Error Handling
+Handle loading states
+
+Show error messages with DOM
+
+📂 Tab 5: Week 7–8 – Firebase Crash Course
+🔹 Session 19–21: Firebase Setup + Auth
+Topics:
+
+Firebase console setup
+
+Firebase Auth (Email/Password)
+
+Code Example:
+
+js
+Copy
+Edit
+// Firebase Auth (sign up)
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const firebaseConfig = { /* your config */ };
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+createUserWithEmailAndPassword(auth, "test@example.com", "password123");
+Resources:
+
+Firebase Auth Docs
+
+🔹 Session 22–24: Firestore Basics
+Firestore document structure
+
+CRUD operations from web app
+
+Code Example:
+
+js
+Copy
+Edit
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+const db = getFirestore(app);
+await setDoc(doc(db, "users", "user1"), { name: "John", age: 20 });
+📂 Tab 6: Week 9–10 – Project 2 (Full CRUD App)
+🔹 Sessions 25–30: Full App with Auth + Firestore
+Goal: Build a Notes App (Login + CRUD)
+
+Features:
+
+Firebase Auth (login/logout)
+
+Firestore (add, edit, delete notes)
+
+Responsive layout
+
+Deploy to Firebase Hosting
+
+📂 Tab 7: Week 11–12 – Portfolio & Deployment
+🔹 Session 31–33: Portfolio Website
+Content:
+
+Custom HTML/CSS portfolio site
+
+Project screenshots, GitHub links, contact form
+
+🔹 Session 34: Hosting Portfolio
+Use GitHub Pages or Firebase Hosting
+
+Configure custom domain (optional)
+
+Resources:
+
+Firebase Hosting Docs
+
+🔹 Session 35–36: LinkedIn + GitHub Review
+Polish GitHub profile (repos, README)
+
+Optimize LinkedIn for junior dev roles
+
+Practice explaining project code live
+
